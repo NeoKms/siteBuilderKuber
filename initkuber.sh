@@ -1,6 +1,6 @@
 #docker
 sudo apt-get update
-sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common -y
+sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common jq -y
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - 
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" 
 sudo apt-get update
@@ -8,6 +8,7 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose -y
 sudo sysctl --system
 #kuber
 sudo apt-get update
+mkdir -p /etc/apt/sources.list.d
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add - 
 echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee -a /etc/apt/sources.list.d/kubernetes.list
 sudo apt-get update 
@@ -33,7 +34,9 @@ kubectl get services --all-namespaces
 #ingress
 kubectl apply -f myingress.yaml
 MY_NOW_IP=`curl -s https://icanhazip.com`
-kubectl patch svc ingress-nginx-controller -n ingress-nginx -p '{"spec": {"type": "NodePort", "externalIPs":["$MY_NOW_IP"]}}'
+kubectl patch svc ingress-nginx-controller -n ingress-nginx -p '{"spec": {"type": "NodePort", "externalIPs":["'$MY_NOW_IP'"]}}'
 kubectl get svc -n ingress-nginx
 #swapoff
 sudo cp /etc/fstab /etc/fstab_backup
+#CA-cert
+kubectl config view --raw -o json | jq -r '.clusters[0].cluster."certificate-authority-data"' | tr -d '"' | base64 --decode
