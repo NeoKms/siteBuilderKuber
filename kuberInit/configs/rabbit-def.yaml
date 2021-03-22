@@ -1,0 +1,9 @@
+apiVersion: v1
+data:
+  HOST: rabbitmq-internal
+kind: ConfigMap
+metadata:
+  labels:
+    io.portainer.kubernetes.configuration.owner: admin
+  name: rabbit-default
+  namespace: default

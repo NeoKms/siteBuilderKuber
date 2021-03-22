@@ -1,0 +1,12 @@
+apiVersion: v1
+data:
+  PASS: root
+  LOGIN: root
+  AUTH_KEY: "8fea39d82cfaae83ed954e7f8e821a3c981c6e854ad2155fc2a86f7d01a8fa52"
+  RABBIT_USER: root:JSfhkgs78yadkH
+kind: ConfigMap
+metadata:
+  labels:
+    io.portainer.kubernetes.configuration.owner: admin
+  name: builder-default
+  namespace: default

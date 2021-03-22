@@ -1,0 +1,45 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: redisu
+  labels:
+    app: redisu
+spec:
+  type: NodePort
+  ports:
+    - port: 6379
+      targetPort: 6379
+      protocol: TCP
+      name: http
+      nodePort: 31379
+  selector:
+    app: redisu
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: redisu
+spec:
+  selector:
+    matchLabels:
+      app: redisu
+  serviceName: "redisu"
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: redisu
+    spec:
+      containers:
+      - image: redis:latest
+        name: redisu
+        ports:
+        - containerPort: 6379
+          name: mysql
+        volumeMounts:
+        - name: redisu-persistent-storage
+          mountPath: /data
+      volumes:
+      - name: redisu-persistent-storage
+        persistentVolumeClaim:
+          claimName: redisu-pv-claim

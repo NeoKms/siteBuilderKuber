@@ -1,0 +1,14 @@
+version: "3.3"
+services:
+  siteBuilderAPI:
+    container_name: siteBuilderAPI
+    build: ./api
+    image: upachko/site_builder_api:latest
+  builder:
+    container_name: builder
+    build: ./builder
+    image: upachko/site_builder_builder:latest
+  front:
+    container_name: front
+    build: ./front
+    image: upachko/site_builder_front:latest

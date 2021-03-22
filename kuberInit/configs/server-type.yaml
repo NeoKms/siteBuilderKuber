@@ -1,0 +1,10 @@
+apiVersion: v1
+data:
+  COOKIE_DOMAIN: .dev.lan
+  PRODUCTION: "true"
+kind: ConfigMap
+metadata:
+  labels:
+    io.portainer.kubernetes.configuration.owner: admin
+  name: serv-type-3
+  namespace: default
