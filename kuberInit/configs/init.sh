@@ -4,3 +4,4 @@ kubectl apply -f server-type.yaml
 kubectl apply -f redis-def.yaml
 kubectl apply -f rabbit-def.yaml
 kubectl apply -f builder-default.yaml
+kubectl apply -f wsserver-default.yaml
