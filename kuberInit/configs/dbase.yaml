@@ -3,7 +3,7 @@ data:
   HOST: mariadb
   NAME: sitebuilder
   PASSWORD: 83hjhk3hjjh74kHDj
-  PORT: 3306
+  PORT: "3306"
   USER: sitebuilder
 kind: ConfigMap
 metadata:
