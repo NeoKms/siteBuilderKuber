@@ -60,7 +60,7 @@ spec:
                   key: PRODUCTION
             - name: VUE_API_URL
               valueFrom:
-                secretKeyRef:
+                configMapKeyRef:
                   name: api-default
                   key: URL
             #wss
