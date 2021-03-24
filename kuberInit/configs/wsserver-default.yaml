@@ -2,8 +2,7 @@ apiVersion: v1
 data:
   SENTRY_KEY: "false"
   PORT: "9001"
-  URL: http://wss.build.lan/
-  HOST: http://wsserver/
+  HOST: http://wss.build.lan/
 kind: ConfigMap
 metadata:
   labels:

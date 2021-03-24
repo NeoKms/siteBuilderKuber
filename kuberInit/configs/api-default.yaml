@@ -3,7 +3,7 @@ data:
   SENTRY_KEY: "false"
   PORT: "3001"
   RABBIT_USER: root:JSfhkgs78yadkH
-  URL: http://site-builder-api/
+  URL: http://api.build.lan/
   LOGIN: getmyself
   PASSWORD: 238uhjKHAD88hnj42k
 kind: ConfigMap
