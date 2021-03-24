@@ -1,12 +1,12 @@
 apiVersion: v1
 data:
-  COOKIE_DOMAIN: .dev.lan
+  COOKIE_DOMAIN: .build.lan
   PRODUCTION: "true"
-  KUBE_URL: "__KURL__"
+  KUBE_URL: "http://__KURL__:6443"
   KUBE_TOKEN: "__KTOKEN__"
 kind: ConfigMap
 metadata:
   labels:
     io.portainer.kubernetes.configuration.owner: admin
-  name: serv-type-3
+  name: server-type
   namespace: default
