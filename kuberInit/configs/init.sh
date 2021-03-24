@@ -5,3 +5,4 @@ kubectl apply -f redis-def.yaml
 kubectl apply -f rabbit-def.yaml
 kubectl apply -f builder-default.yaml
 kubectl apply -f wsserver-default.yaml
+kubectl apply -f processor-default.yaml
