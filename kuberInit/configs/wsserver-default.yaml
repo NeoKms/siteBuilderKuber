@@ -3,8 +3,7 @@ data:
   SENTRY_KEY: "false"
   PORT: 9001
   URL: http://wss.build.lan/
-  HOST: ws://wsserver
-  HOST2: http://wsserver/
+  HOST: http://wsserver/
 kind: ConfigMap
 metadata:
   labels:
