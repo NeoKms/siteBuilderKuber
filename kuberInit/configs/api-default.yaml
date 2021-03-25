@@ -4,7 +4,7 @@ data:
   PORT: "80"
   RABBIT_USER: root:JSfhkgs78yadkH
   HOST: http://site-builder-api/
-  URL: http://api.build.lan
+  URL: http://api.build.lan/
   LOGIN: getmyself
   PASSWORD: 238uhjKHAD88hnj42k
 kind: ConfigMap
