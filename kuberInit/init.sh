@@ -1,3 +1,4 @@
+cd configs && sh init.sh && cd ../
 cd mariadb && sh init.sh && cd ../
 cd rabbit && sh init.sh && cd ../
 cd redis && sh init.sh && cd ../
