@@ -1,7 +1,7 @@
 apiVersion: v1
 data:
   SENTRY_KEY: "false"
-  PORT: "3001"
+  PORT: "80"
   RABBIT_USER: root:JSfhkgs78yadkH
   HOST: http://site-builder-api/
   URL: http://api.build.lan
