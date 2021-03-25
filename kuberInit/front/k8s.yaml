@@ -68,7 +68,7 @@ spec:
               valueFrom:
                 configMapKeyRef:
                   name: wsserver-default
-                  key: HOST
+                  key: URL
           lifecycle:
             postStart:
               exec:

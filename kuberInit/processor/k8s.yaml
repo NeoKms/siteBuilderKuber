@@ -28,7 +28,7 @@ spec:
     metadata:
       labels:
         app: site-processor
-        commitHash: saaa
+        commitHash: ffff
     spec:
       containers:
         - image: upachko/site_builder_processor:latest

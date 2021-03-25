@@ -45,7 +45,7 @@ spec:
     metadata:
       labels:
         app: wsserver
-        commitHash: sssd
+        commitHash: ffff
     spec:
       imagePullSecrets:
         - name: regsecret

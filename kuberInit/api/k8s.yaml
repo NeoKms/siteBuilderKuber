@@ -45,7 +45,7 @@ spec:
     metadata:
       labels:
         app: site-builder-api
-        commitHash: asdasda
+        commitHash: ggg
     spec:
       containers:
         - image: upachko/site_builder_api:latest
