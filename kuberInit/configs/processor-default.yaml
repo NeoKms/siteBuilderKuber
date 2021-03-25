@@ -4,6 +4,8 @@ data:
   PORT: "3001"
   RABBIT_USER: root:JSfhkgs78yadkH
   HOST: http://site-processor/
+  PASSWORD: 238uhjKHAD88hnj42k
+  LOGIN: getmyself
 kind: ConfigMap
 metadata:
   labels:
