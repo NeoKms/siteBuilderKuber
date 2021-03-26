@@ -2,7 +2,7 @@ apiVersion: v1
 data:
   COOKIE_DOMAIN: .build.lan
   PRODUCTION: "true"
-  KUBE_URL: "http://__KURL__:6443"
+  KUBE_URL: "https://__KURL__:6443"
   KUBE_TOKEN: "__KTOKEN__"
   KUBE_IP: "__KUBEIP__"
 kind: ConfigMap
