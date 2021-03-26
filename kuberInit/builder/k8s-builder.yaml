@@ -45,7 +45,7 @@ spec:
     metadata:
       labels:
         app: site-builder-__SITE_ID__
-        commitHash: ggg
+        commitHash: fff
     spec:
       containers:
         - image: upachko/site_builder_builder:latest
@@ -74,7 +74,7 @@ spec:
               valueFrom:
                 configMapKeyRef:
                   name: api-default
-                  key: HOST
+                  key: URL
             - name: APP_PATH
               value: "/var/www/"
             - name: WWW_PATH
