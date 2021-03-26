@@ -46,4 +46,5 @@ swapoff -a
 sudo cp /etc/fstab /etc/fstab_backup
 #
 sh dataForGitlab.sh
-sh kuberInit/init.sh
+cd kuberInit
+sh init.sh
