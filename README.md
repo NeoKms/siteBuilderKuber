@@ -1,5 +1,5 @@
 # Автоматическое развертывание мастер-ноды кубернетес. 
-# Для запуска: sh initkuber.sh
+# Для запуска: sh initkuber.sh и через минуту sh kuberInit/init.sh
 # kubelet=1.18.0-00 kubectl=1.18.0-00 kubeadm=1.18.0-00 
 # Используется:
 - flanel
