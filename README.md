@@ -1,5 +1,4 @@
 # Автоматическое развертывание мастер-ноды кубернетес. 
-# Для запуска: sh initkuber.sh и через минуту sh kuberInit/init.sh
 # kubelet=1.18.0-00 kubectl=1.18.0-00 kubeadm=1.18.0-00 
 # Используется:
 - flanel
@@ -7,6 +6,19 @@
 - portainer (NodePort: 30777)
 - auto nfs (имя класса: autonfs. Тестовый PVC 1Mi: nfs)
 # Для подключения к гитлабу выводится ip, cert, admin token
+---
+# Для запуска: sh initkuber.sh и через минуту sh kuberInit/init.sh 
+## (желательно на чистой машине, например с помощью https://vscale.io/)
+# Далее прописать на ip сервера в файле хостс следующие домены:
+- __IP__ wss.build.lan
+- __IP__ api.build.lan
+- __IP__ preview.build.lan
+- __IP__ front.build.lan
+- __IP__ s1.build.lan
+- __IP__ s2.build.lan
+- __IP__ s3.build.lan
+- __IP__ s4.build.lan
+## Теперь можно перейти на front.build.lan и пользоваться.
 ---
 # Работа с job-тестами:
 *kubectl describe jobs* - вывести всю информацию о работах
