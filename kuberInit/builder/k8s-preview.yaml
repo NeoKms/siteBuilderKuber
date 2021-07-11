@@ -25,7 +25,6 @@ metadata:
 spec:
   ports:
     - port: 80
-  clusterIP: None
   selector:
     app: site-builder-prewiev
 ---
@@ -45,13 +44,18 @@ spec:
     metadata:
       labels:
         app: site-builder-prewiev
-        commitHash: ggg
+        commitHash: dfghtd
     spec:
       containers:
         - image: upachko/site_builder_builder:latest
           imagePullPolicy: Always
           name: site-builder-prewiev
           env:
+            - name: PREVIEW_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: builder-default
+                  key: PREVIEW_URL
             - name: PRODUCTION
               valueFrom:
                 configMapKeyRef:

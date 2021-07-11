@@ -4,6 +4,7 @@ data:
   LOGIN: root
   AUTH_KEY: "8fea39d82cfaae83ed954e7f8e821a3c981c6e854ad2155fc2a86f7d01a8fa52"
   RABBIT_USER: root:JSfhkgs78yadkH
+  PREVIEW_URL: http://preview.build.lan
 kind: ConfigMap
 metadata:
   labels:

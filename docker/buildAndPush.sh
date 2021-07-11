@@ -1,1 +1,0 @@
-docker-compose -f pushImages.yml build --no-cache && docker-compose -f pushImages.yml push

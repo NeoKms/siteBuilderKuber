@@ -8,7 +8,6 @@ metadata:
 spec:
   ports:
     - port: 3001
-  clusterIP: None
   selector:
     app: site-processor
 ---
@@ -28,7 +27,7 @@ spec:
     metadata:
       labels:
         app: site-processor
-        commitHash: ffff
+        commitHash: dddf
     spec:
       containers:
         - image: upachko/site_builder_processor:latest
