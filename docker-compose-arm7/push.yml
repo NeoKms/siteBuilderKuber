@@ -1,0 +1,22 @@
+version: "3.3"
+services:
+  front:
+    container_name: front
+    build: siteBuilderFront/.
+    image: upachko/site_builder_front:arm7
+  builder:
+    container_name: builder
+    build: siteBuilderBuilder/.
+    image: upachko/site_builder_builder:arm7
+  proc:
+    container_name: proc
+    build: SiteBuilderProcessor/.
+    image: upachko/site_builder_processor:arm7
+  webso:
+    container_name: webso
+    build: SiteBuilderWebsocket/.
+    image: upachko/site-builder-websocket:arm7
+  api:
+    container_name: api
+    build: siteBuilderAPI/.
+    image: upachko/site_builder_api:arm7

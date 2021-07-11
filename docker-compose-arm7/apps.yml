@@ -1,0 +1,91 @@
+version: "3.3"
+services:
+  api:
+    container_name: api
+    image: upachko/site_builder_api:arm7
+    restart: always
+    ports:
+      - "********:80"
+    environment:
+      PRODUCTION: "true"
+      PORT: 80
+      COOKIE_DOMAIN: ********
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      RABBIT_USER: root:JSfhkgs78yadkH
+      RABBIT_HOST: rabbit
+      DB_HOST: mariadbuilder
+      DB_PORT: 3306
+      DB_USER: root
+      DB_PASSWORD: srkhgaorhbtj|E
+      DB_NAME: test
+      SENTRY_KEY: ********
+      AUTH_LOGIN: getmyself
+      AUTH_PASSWORD: 238uhjKHAD88hnj42k
+      WEBSOCKET_HOST: https://********/
+      UPLOAD: /var/siteBuilderAPI/upload/
+  processor:
+    container_name: processor
+    image: upachko/site_builder_processor:arm7
+    restart: always
+    ports:
+      - "********:80"
+    environment:
+      IS_COMPOSE: "true"
+      PRODUCTION: "true"
+      PORT: 80
+      RABBIT_USER: root:JSfhkgs78yadkH
+      RABBIT_HOST: rabbit
+      API_HOST: https://********/
+      API_LOGIN: root
+      API_PASSWORD: root
+      WEBSOCKET_HOST: https://********/
+      COOKIE_DOMAIN: ********
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+  websocket:
+    container_name: websocket
+    image: upachko/site-builder-websocket:arm7
+    restart: always
+    ports:
+      - "********:80"
+    environment:
+      PRODUCTION: "true"
+      PORT: 80
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+  preview:
+    container_name: preview
+    image: upachko/site_builder_builder:arm7
+    restart: always
+    ports:
+      - "********:80"
+    environment:
+      PRODUCTION: "true"
+      PREVIEW_URL: https://********/
+      KUBE_IP: ********
+      COOKIE_DOMAIN: ********
+      SITE_ID: 0
+      API_HOST_NAME: https://********/
+      APP_PATH: /var/www/
+      WWW_PATH: /var/www/html/
+      API_PASS: root
+      API_LOGIN: root
+      RABBIT_USER: root:JSfhkgs78yadkH
+      RABBIT_HOST: rabbit
+      AUTH_KEY: ********
+  front:
+    container_name: front
+    image: upachko/site_builder_front:arm7
+    restart: always
+    ports:
+      - "********:80"
+    environment:
+      VUE_PRODUCTION: "true"
+      VUE_WEBSOCKET_HOST: https://********
+      VUE_API_URL: https://********
+      VUE_PREVIEW_URL: https://********
+networks:
+  default:
+    external:
+      name: sitrbuilder
