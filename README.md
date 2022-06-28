@@ -10,14 +10,7 @@
 # Для запуска: sh initkuber.sh и через минуту sh kuberInit/init.sh 
 ## (желательно на чистой машине, например с помощью https://vscale.io/)
 # Далее прописать на ip сервера в файле хостс следующие домены:
-- __IP__ wss.build.lan
-- __IP__ api.build.lan
-- __IP__ preview.build.lan
-- __IP__ front.build.lan
-- __IP__ s1.build.lan
-- __IP__ s2.build.lan
-- __IP__ s3.build.lan
-- __IP__ s4.build.lan
+- __IP__ wss.build.lan api.build.lan preview.build.lan front.build.lan s1.build.lan s2.build.lan s3.build.lan s4.build.lan
 ## Теперь можно перейти на front.build.lan и пользоваться.
 ---
 # Работа с job-тестами:
