@@ -54,6 +54,7 @@ services:
       PORT: 80
       REDIS_HOST: redis
       REDIS_PORT: 6379
+      COOKIE_DOMAIN: ****
   preview:
     container_name: preview
     image: upachko/site_builder_builder:arm7
