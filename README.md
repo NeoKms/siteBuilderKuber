@@ -1,3 +1,18 @@
+### Проект [Автоматизированная система генерации шаблонных сайтов в области коммерческой недвижимости](https://front.jrgreez.ru/)
+## Приложения
+
+[Работающий прототип проекта](https://front.jrgreez.ru/)
+
+[NeoKms/siteBuilderAPI](https://github.com/NeoKms/siteBuilderAPI) - API на Node.js.
+
+[NeoKms/siteBuilderFront](https://github.com/NeoKms/siteBuilderFront) - Клиент на Vue.js (v2)
+
+[NeoKms/SiteBuilderProcessor](https://github.com/NeoKms/SiteBuilderProcessor) - Приложение обслуживания очередей и вебсокета на Node.js
+
+[NeoKms/siteBuilderBuilder](https://github.com/NeoKms/siteBuilderBuilder) -  Сборщик шаблонных сайтов на PHP
+
+[NeoKms/SiteBuilderWebsocket](https://github.com/NeoKms/SiteBuilderWebsocket) - Вебсокет-сервер на Node.js
+
 # Автоматическое развертывание мастер-ноды кубернетес. 
 # kubelet=1.18.0-00 kubectl=1.18.0-00 kubeadm=1.18.0-00 
 # Используется:
