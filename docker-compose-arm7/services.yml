@@ -22,7 +22,7 @@ services:
       - "********:15672"
   mariadbuilder:
     container_name: mariadbuilder
-    image: 459below/mariadb-armv7
+    image: arm64v8/mariadb
     restart: always
     ports:
       - "********:3306"
